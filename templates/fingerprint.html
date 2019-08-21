@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+{{super()}}
+<script src="static/js/finger.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-2 mb-5">
+        <div class="col-10"></div>
+        <div class="col-2">
+            <img src="static/img/logo.png" alt="logo" class="img-fluid">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 text-center">
+            <img src="static/img/fingerprint.png" alt="fingerprint" class="img-fluid">
+        </div>
+        <div class="col-6 text-center">
+            <p class="display-4 text-center font-weigth-bold ">Welcome</p>
+            <p class="display-6 text-center font-weigth-bold ">Please position your fingerprint for scanning</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

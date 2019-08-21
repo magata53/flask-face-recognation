@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+{{super()}}
+<script src="static/js/access.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-2 mb-5">
+        <div class="col-10"></div>
+        <div class="col-2">
+            <img src="static/img/logo.png" alt="logo" class="img-fluid">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 text-center">
+            <img src="static/img/profile.gif" alt="profile" class="img-fluid">
+        </div>
+        <div class="col-6 text-center">
+            <p class="display-5 text-center font-weigth-bold text-danger">Access Denied</p>
+            <p class="display-6 text-center font-weigth-bold ">Information does not match our records</p>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 text-center">
+            <input type="hidden" value="{{change.type}}">
+            {% if change['type'] == 'face' %}
+            <p class="display-5 text-center font-weigth-bold text-primary">Please try fingerprint</p>
+            {% else %}
+            <p class="display-5 text-center font-weigth-bold text-primary">Please see admin</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
