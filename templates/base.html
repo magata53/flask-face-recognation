@@ -1,9 +1,10 @@
 {% extends "bootstrap/base.html" %}
 
-{% block title %} Example {% endblock %}
+{% block title %} Door Lock {% endblock %}
 
 {% block styles %}
 {{super()}}
+<link rel="icon" type="image/x-icon" href="static/img/gspe.ico" />
 <link rel="stylesheet"
       href="{{url_for('.static', filename='css/main.css')}}">
 {% endblock %}
